@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DTOModel
 {
+    //dto class for order table
     public class orderDTO
     {
         public int id { get; set; }
