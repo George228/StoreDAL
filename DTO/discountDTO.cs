@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DTOModel
-{//DTO for discount
+{//DTO for discount tedt
     public class discountDTO
     {
         public int id { get; set; }
