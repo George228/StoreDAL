@@ -15,8 +15,7 @@ namespace OnlineStoreApp
     
     public partial class OnlineStoreEntities : DbContext
     {
-        public OnlineStoreEntities()
-            : base("name=OnlineStoreEntities")
+        public OnlineStoreEntities() : base("name=OnlineStoreEntities")
         {
         }
     

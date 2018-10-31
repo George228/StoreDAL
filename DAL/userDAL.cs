@@ -32,7 +32,7 @@ namespace DAL_Library1
 
             using (OnlineStoreEntities db = new OnlineStoreEntities())
             {
-
+                
                 discountDTO add = new discountDTO
                 {
                     id = Id,
@@ -55,7 +55,37 @@ namespace DAL_Library1
                 return users;
             }
         }
-         
+        
+        public bool checkCredentials(string username, string pass)
+        {
+            List<userDTO> users = GetAllUsers();
+           
+            //userDTO check = users.Where(u => (u.user_name == username) &&
+            //   ( u.password == pass)).SingleOrDefault();
+            //if (check != null)
+            //{
+            //    return true;
+            //}
+          
+            foreach (userDTO user in users)
+            {
+               // Console.WriteLine(user.user_name + "\t" + username);
+                //Console.WriteLine(user.password + "\t" + pass);
+                
+                if (string.Equals(user.user_name,username) && string.Equals(user.password,pass))
+                {
+                    Console.WriteLine("match found");
+                        return true;
+                }
+               
+            }
+          //  }
+
+            return false;
+                
+        }
+
+        
         public userDTO GetUserByID(int Id)
         {
             using (OnlineStoreEntities db = new OnlineStoreEntities())
